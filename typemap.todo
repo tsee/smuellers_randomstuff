@@ -12,7 +12,8 @@ T_PTR => A little light on docs?
 T_PTRDESC => no docs, no tests
 T_REF_IV_REF => no docs, no tests
 T_REFOBJ => no docs, no tests
-T_REFREF => no docs, no tests
+
+T_REFREF => no docs, no tests (Steffen WIP: Docs added, but no tests yet. Maybe this should just go away instead)
 
 T_LONG => Documented, but not tested (DONE, tests added)
 T_SHORT => docs, but no tests (DONE, tests added)
