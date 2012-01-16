@@ -14,6 +14,7 @@ T_PTRDESC => no docs, no tests
 T_REF_IV_REF => no docs, no tests
 T_REFOBJ => no docs, no tests
 T_REFREF => no docs, no tests
+
 T_SHORT => docs, but no tests (DONE, tests added)
 T_U_INT => docs, but no tests (DONE, tests added)
-T_INT => Documented as being identical in effect to using int+T_IV, not tested (Steffen WIP)
+T_INT => Documented as being identical in effect to using int+T_IV, not tested (DONE, tests added)
