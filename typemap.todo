@@ -4,7 +4,6 @@ T_DATAUNIT => no docs, no tests
 T_IN => no docs, no tests
 T_OUT => no docs, no tests
 T_INOUT => docs, but no tests
-T_LONG => Documented, but not tested
 T_OPAQUEPTR => Documented, tested, but an example in the docs could help
 T_OPAQUE => Documented, tested, but the docs are slightly opaque? ;)
 T_PACKED => No docs, no tests
@@ -15,6 +14,7 @@ T_REF_IV_REF => no docs, no tests
 T_REFOBJ => no docs, no tests
 T_REFREF => no docs, no tests
 
+T_LONG => Documented, but not tested (DONE, tests added)
 T_SHORT => docs, but no tests (DONE, tests added)
 T_U_INT => docs, but no tests (DONE, tests added)
 T_INT => Documented as being identical in effect to using int+T_IV, not tested (DONE, tests added)
