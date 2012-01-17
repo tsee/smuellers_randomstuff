@@ -1,3 +1,19 @@
+
+- General docs to be written:
+=> Concept. (done? David, could you proof-read this in the smueller/typemapdocs branch?)
+=> Structure of typemap file
+=> typemaps and CPAN distributions (done? Also needs review)
+=> Writing typemaps: 
+   => What they are (double-quote interpolated Perl strings that contain C)
+   => What variables they have access to by default.
+      => Given this opportunity of having to read ParseXS code, it might be a good idea
+         to change the way that typemaps are evaluated and encapsulate it more, likely
+         by copious use of eval "".
+
+=> Should we document how exactly the T_ARRAY mess works? It's really, really nasty.
+
+- Typemap docs/tests that need work:
+
 T_ARRAY => kind of fucked up, but tested and documented. Docs could use an example.
 T_CALLBACK => no docs, no tests
 T_DATAUNIT => no docs, no tests
