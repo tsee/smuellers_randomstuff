@@ -1,3 +1,6 @@
+The actual work is happening in the core perl repo in the smueller/typemapdocs branch.
+Feel free to fork on github or submit plain git-format-patch patches.
+--Steffen
 
 - General docs to be written:
 => Concept. (done? David, could you proof-read this in the smueller/typemapdocs branch?)
