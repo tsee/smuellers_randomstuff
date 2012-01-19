@@ -23,7 +23,14 @@ Feel free to fork on github or submit plain git-format-patch patches.
 
 T_ARRAY => kind of fucked up, but tested and documented. Docs could use an example.
 T_CALLBACK => no docs, no tests
-T_DATAUNIT => no docs, no tests
+T_DATAUNIT => no docs, no tests (Steffen WIP: I tried to figure out what this does,
+                                 tried to find it on the internet (outside the copies of
+                                 the core typemap) and failed to find any reference.
+                                 Event in 2001, Tim Jenness had no idea what this was
+                                 for. I believe it's a candidate for the axe^W^Wbeing
+                                 migrated to CPAN. Update: I've written the code to
+                                 include a typemap from CPAN with one line of XS.
+                                 Details forthcoming (this will be part of the docs).)
 T_IN => no docs, no tests
 T_OUT => no docs, no tests
 T_INOUT => docs, but no tests
