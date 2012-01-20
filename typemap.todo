@@ -17,10 +17,15 @@ Feel free to fork on github or submit plain git-format-patch patches.
       => Given this opportunity of having to read ParseXS code, it might be a good idea
          to change the way that typemaps are evaluated and encapsulate it more, likely
          by copious use of eval "".
+ - added some simple variable documentation to core perl tonyc/typemapdocs branch
 
 => Should we document how exactly the T_ARRAY mess works? It's really, really nasty
    and in a better world, I'd just kill it off and replace it with something that
    doesn't give me an ulcer.
+
+=> strange array(type, count) handling for output processing
+
+=> Array and Ptr suffixes on type names - is it useful beyond T_ARRA?
 
 - Typemap docs/tests that need work:
 
