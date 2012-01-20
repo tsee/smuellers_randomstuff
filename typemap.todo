@@ -1,5 +1,6 @@
 The actual work is happening in the core perl repo in the smueller/typemapdocs branch.
-Feel free to fork on github or submit plain git-format-patch patches.
+Feel free to fork on github or submit plain git-format-patch patches. (Tony, you can,
+of course, just push to that branch...)
 --Steffen
 
 - General docs to be written:
@@ -25,7 +26,9 @@ Feel free to fork on github or submit plain git-format-patch patches.
 
 => strange array(type, count) handling for output processing
 
-=> Array and Ptr suffixes on type names - is it useful beyond T_ARRA?
+=> Array and Ptr suffixes on type names - is it useful beyond T_ARRAY?
+   => my limited understanding is that this is for T_ARRAY specifically. There's quite
+      a lot of code in EU::ParseXS to support just all of this. What a mess. --Steffen
 
 - Typemap docs/tests that need work:
 
