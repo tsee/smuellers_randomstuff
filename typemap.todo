@@ -6,10 +6,11 @@ Feel free to fork on github or submit plain git-format-patch patches.
 => Concept. (done? David, could you proof-read this in the smueller/typemapdocs branch?)
 => Structure of typemap file (done? review?)
 => Figure out whether to document that comments in INPUT/OUTPUT don't work or whether to
-   "fix" what might be relied on somewhere (Steffen WIP)
+   "fix" what might be relied on somewhere (Steffen WIP, see p5p thread, needs decision)
 => typemaps and CPAN distributions (done? Also needs review)
    => Needs mention of "this is how you include a typemap from an ExtUtils::Typemaps-based
-                        CPAN distribution" as a recipe.
+                        CPAN distribution" as a recipe. (DONE)
+
 => On writing typemaps: 
    => What they are (double-quote interpolated Perl strings that contain C)
    => What variables they have access to by default.
@@ -30,9 +31,8 @@ T_DATAUNIT => no docs, no tests (Steffen WIP: I tried to figure out what this do
                                  the core typemap) and failed to find any reference.
                                  Event in 2001, Tim Jenness had no idea what this was
                                  for. I believe it's a candidate for the axe^W^Wbeing
-                                 migrated to CPAN. Update: I've written the code to
-                                 include a typemap from CPAN with one line of XS.
-                                 Details forthcoming (this will be part of the docs).)
+                                 migrated to CPAN. Update: Could be sent to retirement
+                                 on the CPAN, see docs in XS::Typemap)
 T_IN => no docs, no tests
 T_OUT => no docs, no tests
 T_INOUT => docs, but no tests
