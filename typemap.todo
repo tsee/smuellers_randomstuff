@@ -8,6 +8,8 @@ Feel free to fork on github or submit plain git-format-patch patches.
 => Figure out whether to document that comments in INPUT/OUTPUT don't work or whether to
    "fix" what might be relied on somewhere (Steffen WIP)
 => typemaps and CPAN distributions (done? Also needs review)
+   => Needs mention of "this is how you include a typemap from an ExtUtils::Typemaps-based
+                        CPAN distribution" as a recipe.
 => On writing typemaps: 
    => What they are (double-quote interpolated Perl strings that contain C)
    => What variables they have access to by default.
