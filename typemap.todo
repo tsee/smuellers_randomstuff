@@ -46,7 +46,6 @@ T_OUT => no docs, no tests
 T_INOUT => docs, but no tests
 T_OPAQUEPTR => Documented, tested, but an example in the docs could help
 T_OPAQUE => Documented, tested, but the docs are slightly opaque? ;)
-T_PACKEDARRAY => No docs, no tests (Steffen WIP: docs added, no tests yet)
 T_PTR => A little light on docs?
 T_PTRDESC => no docs, no tests
 T_REF_IV_REF => no docs, no tests
@@ -54,6 +53,7 @@ T_REFOBJ => no docs, no tests
 
 T_REFREF => no docs, no tests (Steffen WIP: Docs added, but no tests yet. Maybe this should just go away instead)
 
+T_PACKEDARRAY => No docs, no tests (Steffen WIP: tests docs added, this wasn't fun to test... I doubt the general usefulness of this typemap as all the hard bits are still up to the user/XS developer.)
 T_PACKED => No docs, no tests (DONE, tests and docs added)
 T_LONG => Documented, but not tested (DONE, tests added)
 T_SHORT => docs, but no tests (DONE, tests added)
