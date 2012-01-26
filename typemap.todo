@@ -4,11 +4,11 @@ of course, just push to that branch...)
 --Steffen
 
 - General docs to be written:
-=> Concept. (done? David, could you proof-read this in the smueller/typemapdocs branch?)
-=> Structure of typemap file (done? review?)
+=> Concept. (done)
+=> Structure of typemap file (done)
 => Figure out whether to document that comments in INPUT/OUTPUT don't work or whether to
    "fix" what might be relied on somewhere (Steffen WIP, see p5p thread, needs decision)
-=> typemaps and CPAN distributions (done? Also needs review)
+=> typemaps and CPAN distributions (done)
    => Needs mention of "this is how you include a typemap from an ExtUtils::Typemaps-based
                         CPAN distribution" as a recipe. (DONE)
 
@@ -23,12 +23,14 @@ of course, just push to that branch...)
 => Should we document how exactly the T_ARRAY mess works? It's really, really nasty
    and in a better world, I'd just kill it off and replace it with something that
    doesn't give me an ulcer.
-
 => strange array(type, count) handling for output processing
 
 => Array and Ptr suffixes on type names - is it useful beyond T_ARRAY?
    => my limited understanding is that this is for T_ARRAY specifically. There's quite
       a lot of code in EU::ParseXS to support just all of this. What a mess. --Steffen
+   => At least the $ntype notion of s/\*/Ptr/g is used for T_PACKED and T_PACKEDARRAY.
+      That means it needs to stay and be documented, but documenting $ntype isn't that
+      much of an issue. --Steffen
 
 - Typemap docs/tests that need work:
 
@@ -43,7 +45,6 @@ T_DATAUNIT => no docs, no tests (Steffen WIP: I tried to figure out what this do
                                  on the CPAN, see docs in XS::Typemap)
 T_IN => no docs, no tests
 T_OUT => no docs, no tests
-T_INOUT => docs, but no tests
 T_OPAQUEPTR => Documented, tested, but an example in the docs could help
 T_OPAQUE => Documented, tested, but the docs are slightly opaque? ;)
 T_PTR => A little light on docs?
@@ -53,7 +54,9 @@ T_REFOBJ => no docs, no tests
 
 T_REFREF => no docs, no tests (Steffen WIP: Docs added, but no tests yet. Maybe this should just go away instead)
 
-T_PACKEDARRAY => No docs, no tests (Steffen WIP: tests docs added, this wasn't fun to test... I doubt the general usefulness of this typemap as all the hard bits are still up to the user/XS developer.)
+
+T_INOUT => docs, but no tests (DONE, tested)
+T_PACKEDARRAY => No docs, no tests (DONE, tests docs added, this wasn't fun to test... I doubt the general usefulness of this typemap as all the hard bits are still up to the user/XS developer.)
 T_PACKED => No docs, no tests (DONE, tests and docs added)
 T_LONG => Documented, but not tested (DONE, tests added)
 T_SHORT => docs, but no tests (DONE, tests added)
