@@ -1,6 +1,8 @@
 #!perl
 use strict;
 use XSFun;
+use Protocol::Redis::XS;
+my $redis = Protocol::Redis::XS->new(api => 1);
 #my $reply = "+OK\r\n";
 my $reply = join "\r\n", qw(
   *3
@@ -53,9 +55,14 @@ sub rparse {
 #use Data::Dumper;
 #warn Dumper(rparse($reply));
 #warn Dumper(XSFun::redis_parse($reply));
+#warn Dumper(do{$redis->parse($reply);$redis->get_message});
 
 use Benchmark qw(timethese);
 timethese(-2, {
   xs => sub {my $x = XSFun::redis_parse($reply)},
   perl => sub {my $x = rparse($reply)},
+  prxs => sub {
+    $redis->parse($reply);
+    my $x = $redis->get_message;
+  },
 });
