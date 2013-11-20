@@ -2,6 +2,16 @@
 use strict;
 use XSFun;
 use Protocol::Redis::XS;
+use RedisDB::Parse::Redis;
+use RedisDB::Parse::Redis_XS;
+use RedisDB::Parse::Redis_PP;
+use Data::Dumper;
+
+my $redisdb = RedisDB::Parse::Redis_PP->new();
+my $redisdb_xs = RedisDB::Parse::Redis_XS->new();
+$redisdb->set_default_callback(sub {});
+$redisdb_xs->set_default_callback(sub {});
+
 my $redis = Protocol::Redis::XS->new(api => 1);
 #my $reply = "+OK\r\n";
 my $reply = join "\r\n", qw(
@@ -11,6 +21,8 @@ my $reply = join "\r\n", qw(
   $9
   hhhhhhhhh
 ), "";
+
+
 #$reply .= "\$100000\r\n" . ("x" x 100000) . "\r\n";
 
 sub parse_elem {
@@ -65,4 +77,6 @@ timethese(-2, {
     $redis->parse($reply);
     my $x = $redis->get_message;
   },
+  redisdb => sub {$redisdb->add($reply)},
+  redisdb_xs => sub {$redisdb_xs->add($reply)},
 });
